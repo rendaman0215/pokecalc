@@ -11,5 +11,5 @@ image:
 run:
 	docker run -d -p 8080:8080 --name pokecalc pokecalc
 
-test:
+try:
 	@grpcurl -plaintext -d '{"name": "ピカチュウ"}' localhost:8080 damage.DamageCalc.Attack
