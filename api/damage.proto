@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "pkg/grpc";
+
+package damage;
+
+service DamageCalc {
+  rpc Attack(DamageCalcRequest) returns (DamageCalcResponse);
+}
+
+// 型の定義
+message DamageCalcRequest {
+  string name = 1;
+}
+
+message DamageCalcResponse {
+  int32 maxDamage = 1;
+  int32 minDamage = 2;
+}
